@@ -12,8 +12,8 @@ public class Neuron {
 		this.bias = bias;
 	}
 	
-	public double feedForward(int x1, int x2) {
-		int total = (x1 * weight1) + ((x2 * weight2) + bias); 
+	public double feedForward(double x1, double x2) {
+		double total = (x1 * weight1) + ((x2 * weight2) + bias); 
 		return sigmoid(total);
 	}
 
