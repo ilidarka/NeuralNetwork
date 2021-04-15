@@ -25,4 +25,23 @@ public class Network {
 		return this.o1.feedForward(this.h1.feedForward(input1, input2), this.h2.feedForward(input1, input2));
 	}
 	
+	public double MSELoss(double YTrue[], double YPred[]) {
+		if(YTrue.length == YPred.length) {
+			double result[] = new double[YTrue.length];
+			for(int i = 0; i < YTrue.length; i++) {
+				result[i] = Math.pow(YTrue[i] - YPred[i], 2);
+			}
+			return mean(result);
+		} 
+		return 0;
+	}
+	
+	private double mean(double result[]) {
+		double sum = 0;
+		for(int i = 0; i < result.length; i++) {
+			sum += result[i];
+		}
+		return sum / result.length;
+	}
+	
 }
