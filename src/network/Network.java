@@ -7,8 +7,6 @@ import network.neuron.Neuron;
  * - 2 inputs
  * - 1 hidden layer with 2 neurons (h1, h2)
  * - 1 output layer with 1 neuron (01)
- * Weight of all neurons [0, 1]
- * Bias of all neurons 0
  * */
 
 public class Network {
