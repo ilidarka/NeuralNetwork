@@ -17,7 +17,7 @@ public class Neuron {
 		return sigmoid(total);
 	}
 
-	private double sigmoid(int x) {
+	private double sigmoid(double x) {
 		return 1 / (1 + Math.pow(Math.E, -x));
 	}
 	
